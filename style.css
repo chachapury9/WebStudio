@@ -21,7 +21,6 @@
 }
 
 .container {
-  display: flex;
   width: 1200px;
   padding: 0 15px;
   outline: red solid;
@@ -63,6 +62,34 @@ ul {
   gap: 30px;
 }
 
+.servces-item::before {
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.servces-item:first-child::before {
+  background-image: url("images/space_thing_icon.svg");
+}
+
+.servces-item:nth-child(2):before {
+  background-image: url("images/clock_icon.svg");
+}
+
+.servces-item:nth-child(3):before {
+  background-image: url("images/clock_icon.svg");
+}
+
+.servces-item:nth-child(4):before {
+  background-image: url("images/astronaut_icon.svg");
+}
+
 .button {
   display: block;
   color: white;
@@ -79,9 +106,10 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  background-color: var(--footer-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(to top, #2f303a66),
+    url(images/Img\ Overlay.png);
 }
 
 p {
@@ -95,6 +123,7 @@ p {
 
 .section-title {
   font-size: 36px;
+  text-align: center;
 }
 
 .team-member-name {
@@ -115,11 +144,12 @@ p {
 }
 
 .about-us {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 94px;
+}
+
+.section-images {
+  display: flex;
+  justify-content: space-between;
 }
 
 .team {
@@ -135,4 +165,18 @@ p {
 
 .team-item {
   text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 2px 1px 0px #00000033;
+
+  box-shadow: 0px 1px 1px 0px #00000024;
+
+  box-shadow: 0px 1px 3px 0px #0000001f;
+}
+
+.team-item {
+  padding-bottom: 30px;
 }
