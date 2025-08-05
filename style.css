@@ -4,6 +4,8 @@
   --special-color: #2196f3;
   --footer-color: #2f303a;
   --team-color: #f5f4fa;
+  --black-color: #212121;
+  --grey-color: #afb1b8;
 }
 
 * {
@@ -20,18 +22,29 @@
   font-weight: bold;
 }
 
+.logo-link {
+  color: black;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
-  outline: red solid;
   margin: 0 auto;
 }
 
 .nav-list {
+  padding-bottom: 25px;
+  padding-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 93px;
+  gap: 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-link {
@@ -50,14 +63,17 @@ ul {
 }
 
 .get-services-title {
+  display: inline-block;
   text-transform: uppercase;
   color: white;
   font-size: 44px;
   line-height: 60px;
   letter-spacing: 6%;
+  margin-bottom: 30px;
 }
 
 .services-list {
+  margin-top: 94px;
   display: flex;
   gap: 30px;
 }
@@ -91,7 +107,8 @@ ul {
 }
 
 .button {
-  display: block;
+  display: inline-block;
+  margin: 0 auto;
   color: white;
   padding: 10px 32px;
   border-radius: 7px;
@@ -101,11 +118,7 @@ ul {
 }
 
 .get-services {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: linear-gradient(to top, #2f303a66),
@@ -124,6 +137,7 @@ p {
 .section-title {
   font-size: 36px;
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .team-member-name {
@@ -137,6 +151,8 @@ p {
   flex-wrap: wrap;
   column-gap: 69px;
   row-gap: 100px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .about-us-image {
@@ -144,6 +160,7 @@ p {
 }
 
 .about-us {
+  margin-top: 94px;
   margin-bottom: 94px;
 }
 
@@ -179,4 +196,182 @@ p {
 
 .team-item {
   padding-bottom: 30px;
+}
+
+.footer {
+  background-color: #212121;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-link {
+  color: var(--p-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 3%;
+  margin-top: 28px;
+}
+
+.footer-logo {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  color: #f5f4fa;
+  margin-bottom: 20px;
+}
+
+.footer-logo > span {
+  color: var(--special-color);
+}
+
+.contact-header-link {
+  color: #757575;
+}
+
+.contact-header-list {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-header-link:hover {
+  color: var(--special-color);
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.p-link {
+  color: var(--black-color);
+  background-color: #f5f4fa;
+  padding: 6px 25px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.p-link:hover {
+  color: var(--team-color);
+  background-color: var(--special-color);
+  padding: 6px 25px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px 0px #0000001f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.portfolio {
+  margin-top: 94px;
+}
+
+.p-s-title {
+  color: var(--black-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.p-s-service {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.p-s-item {
+  border: 1px solid #eeeeee;
+  width: 370px;
+}
+
+.p-servieces {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 94px;
+}
+
+.p-s-item:hover {
+  border: 1px solid #eeeeee;
+  width: 370px;
+  box-shadow: 1px 4px 6px 0px #00000029;
+
+  box-shadow: 0px 4px 4px 0px #0000000f;
+
+  box-shadow: 0px 1px 1px 0px #0000001f;
+}
+
+.clients {
+  margin-top: 94px;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-svg {
+  width: 180px;
+  height: 100px;
+  fill: var(--grey-color);
+  border: 1px solid var(--grey-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 110px;
+}
+
+.clients-link:hover .clients-svg,
+.clients-link:focus .clients-svg {
+  fill: var(--special-color);
+  border-color: var(--special-color);
+}
+
+.team-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--grey-color);
+}
+
+.team-socials {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  align-items: center;
+}
+
+.team-member-name {
+  margin-top: 16px;
+}
+
+.team-link {
+  padding: 12px;
+}
+
+.team-link:hover .team-svg,
+.team-link:focus .team-svg {
+  fill: white;
+}
+
+.team-link:hover {
+  display: inline-block;
+  background-color: var(--special-color);
+  padding: 12px;
+  border-radius: 100px;
 }
