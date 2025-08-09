@@ -43,12 +43,55 @@
       </nav>
     </header>
     <main>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal-close" data-modal-close>
+            <svg class="modal-close-svg">
+              <use href="./images/symbol-defs.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+          <form action="" class="modal-form">
+            <p class="modal-f-label">Ім'я</p>
+            <svg class="modal-svg">
+              <use href="./images/symbol-defs.svg#icon-person"></use>
+            </svg>
+            <input type="text" class="modal-input" />
+
+            <p class="modal-f-label">Телефон</p>
+            <svg class="modal-svg">
+              <use href="./images/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <input type="text" class="modal-input" />
+            <p class="modal-f-label">Пошта</p>
+            <svg class="modal-svg">
+              <use href="./images/symbol-defs.svg#icon-email"></use>
+            </svg>
+            <input type="text" class="modal-input" />
+            <p class="modal-f-label">Комментар</p>
+            <input
+              type="text"
+              placeholder="Введіть текст"
+              class="modal-comment"
+            />
+            <div class="agreement">
+              <input type="checkbox" />
+              <p class="modal-agree">
+                Погоджуюся з розсилкою та приймаю <span>Умови договору</span>
+              </p>
+            </div>
+            <button type="submit" class="modal-button">Відправити</button>
+          </form>
+        </div>
+      </div>
       <section class="get-services">
         <div class="container">
           <h1 class="get-services-title">
             Ефективні рішення для вашого бізнесу
           </h1>
-          <button class="button" type="button">Замовити послугу</button>
+          <button class="button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="container services">
@@ -85,9 +128,24 @@
       <section class="container about-us">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="section-images">
-          <li><img src="/images/box 1.jpg" class="about-us-image" /></li>
-          <li><img src="/images/img.png" class="about-us-image" /></li>
-          <li><img src="/images/box 3.png" class="about-us-image" /></li>
+          <li>
+            <img src="/images/box 1.jpg" class="about-us-image" />
+            <div class="about-us-title">
+              <h2 class="about-us-text">ДЕСКТОПНІ ДОДАТКИ</h2>
+            </div>
+          </li>
+          <li>
+            <img src="/images/img.png" class="about-us-image" />
+            <div class="about-us-title">
+              <h2 class="about-us-text">ДЕСКТОПНІ ДОДАТКИ</h2>
+            </div>
+          </li>
+          <li>
+            <img src="/images/box 3.png" class="about-us-image" />
+            <div class="about-us-title">
+              <h2 class="about-us-text">ДЕСКТОПНІ ДОДАТКИ</h2>
+            </div>
+          </li>
         </ul>
       </section>
       <section class="team">
@@ -305,25 +363,78 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a href="" class="footer-logo"> <span>Web</span>Studio </a>
-        <address class="footer-adress">
-          <ul class="footer-contact-list">
-            <li class="footer-contact-item">
-              <a href="" class="footer-link">м. Київ, пр-т Лесі Українки, 26</a>
-            </li>
-            <li class="footer-contact-item">
-              <a href="mailto:info@devstudio.com" class="footer-link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="footer-contact-item">
-              <a href="phonetto:+38 096 111 11 11" class="footer-link"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <div class="footer-wrapper">
+          <div class="footer-contacts">
+            <a href="" class="footer-logo"> <span>Web</span>Studio </a>
+            <address class="footer-adress">
+              <ul class="footer-contact-list">
+                <li class="footer-contact-item">
+                  <a href="" class="footer-link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-contact-item">
+                  <a href="mailto:info@devstudio.com" class="footer-link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-contact-item">
+                  <a href="phonetto:+38 096 111 11 11" class="footer-link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer-socials">
+            <h3 class="footer-s-title">ПРИЄДНУЙТЕСЬ</h3>
+            <ul class="footer-s-list">
+              <li class="footer-s-item">
+                <a href="" class="footer-s-l-link">
+                  <svg class="footer-s-l-svg">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-s-item">
+                <a href="" class="footer-s-l-link">
+                  <svg class="footer-s-l-svg">
+                    <use
+                      href="./images/symbol-defs.svg#icon-twitter-bird"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-s-item">
+                <a href="" class="footer-s-l-link">
+                  <svg class="footer-s-l-svg">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-s-item">
+                <a href="" class="footer-s-l-link">
+                  <svg class="footer-s-l-svg">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <form action="" class="footer-form">
+            <h3 class="footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+            <input type="email" class="footer-input" placeholder="E-mail" />
+            <button class="footer-button" type="submit">
+              Підписатися
+              <svg class="footer-form-svg">
+                <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <script src="./moda.js"></script>
   </body>
 </html>
