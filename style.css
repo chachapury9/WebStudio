@@ -57,6 +57,7 @@
   font-size: 14px;
   letter-spacing: 2%;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
@@ -241,6 +242,7 @@ p {
 
 .contact-header-link {
   color: #757575;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-header-list {
@@ -264,6 +266,7 @@ p {
   padding: 6px 25px;
   border-radius: 4px;
   font-weight: 500;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 16px;
 }
 
@@ -376,6 +379,7 @@ p {
 .team-link {
   padding: 12px;
   line-height: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-link:hover .team-svg,
@@ -426,6 +430,7 @@ p {
   background-color: #ffffff1a;
   border-radius: 100%;
   line-height: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-s-l-link:hover {
