@@ -525,6 +525,8 @@ p {
   height: 100vh;
   top: 0;
   left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal {
@@ -540,6 +542,8 @@ p {
   box-shadow: 0px 1px 1px 0px #00000024;
 
   box-shadow: 0px 1px 3px 0px #0000001f;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal-title {
@@ -548,6 +552,7 @@ p {
   font-weight: 700;
   font-size: 20px;
   margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 .modal-input {
@@ -561,11 +566,15 @@ p {
   color: var(--p-color);
   padding-left: 35px;
   border-color: var(--grey-color);
+  margin-bottom: 10px;
 }
 
 .modal-f-label {
   margin-left: 40px;
   margin-top: 10px;
+  position: relative;
+  margin-bottom: 4px;
+  color: var(--p-color);
 }
 
 .modal-comment {
@@ -581,11 +590,13 @@ p {
 }
 
 .modal-svg {
-  width: 12px;
-  height: 12px;
+  display: block;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  margin-left: 50px;
-  margin-top: 25px;
+  left: 12px;
+  top: 37px;
+  z-index: 1;
 }
 
 .modal-agree {
@@ -666,7 +677,9 @@ p {
 }
 
 .is-hidden {
-  display: none;
+  pointer-events: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .no-scroll {
